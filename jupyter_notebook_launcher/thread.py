@@ -49,7 +49,7 @@ class JupyterNotebookThread(Thread):
         self.p.terminate()
 
     def launch(self):
-        args = ["jupyter-notebook"]
+        args = ["jupyter-lab"]
         if self.notebook != None:
             args += [self.notebook]
         self.p = Popen(args, stdout = PIPE, stderr = PIPE)
